@@ -64,14 +64,16 @@
                 Continue with LinkedIn
               </button>
               <div class="_email_1v2hj_1">
-                <button
-                  class="style-module_button__-niPX style-module_secondary__K8Xdw style-module_medium__ASKee"
-                  type="button"
-                >
-                  <i class="fas fa-envelope"></i>
-                  <span class="style-module_spacing__fGq8-"></span>
-                  Continue with Email
-                </button>
+                  <button
+                    class="style-module_button__-niPX style-module_secondary__K8Xdw style-module_medium__ASKee"
+                    type="button"
+                  >
+                  <router-link :to="{name: 'file_home'}">
+                    <i class="fas fa-envelope"></i>
+                    <span class="style-module_spacing__fGq8-"></span>
+                    Continue with Email
+                  </router-link>
+                  </button>
               </div>
             </div>
             <p class="_disclaimer_u1fl5_84 animation slide-in delay">
