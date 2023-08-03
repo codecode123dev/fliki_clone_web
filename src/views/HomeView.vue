@@ -109,58 +109,76 @@
           <div class="style_item__UR5ql">
             <h4>🧑🏻‍🏭 People & Culture</h4>
             <div class="style_player__N8Vik">
-              <img src="../assets/imageHome/3-things-to-do.jpg" alt="3 thing" />
-              <button class="style_small__jRtII">
+              <!-- <img src="../assets/imageHome/3-things-to-do.jpg" alt="3 thing" /> -->
+              <video id="MainPageVideList" controls poster="../assets/imageHome/3-things-to-do.jpg" >
+                <source src="../assets/video_home/3_things.mp4"  >
+              </video>
+              <!-- <button class="style_small__jRtII">
                 <i class="fas fa-play-circle"></i>
-              </button>
+              </button> -->
             </div>
           </div>
           <div class="style_item__UR5ql">
             <h4>😱 Emotions</h4>
             <div class="style_player__N8Vik">
-              <img src="../assets/imageHome/voice.jpg" alt="voice" />
+              <!-- <img src="../assets/imageHome/voice.jpg" alt="voice" />
               <button class="style_small__jRtII">
                 <i class="fas fa-play-circle"></i>
-              </button>
+              </button> -->
+              <video id="MainPageVideList" controls poster="../assets/imageHome/voice.jpg" >
+                <source src="../assets/video_home/3_things.mp4"  >
+              </video>
             </div>
           </div>
           <div class="style_item__UR5ql">
             <h4>💪🏻 Growth and Wellbeing</h4>
             <div class="style_player__N8Vik">
-              <img
+              <!-- <img
                 src="../assets/imageHome/productivity.jpg"
                 alt="productivity"
               />
               <button class="style_small__jRtII">
                 <i class="fas fa-play-circle"></i>
-              </button>
+              </button> -->
+              <video id="MainPageVideList" controls poster="../assets/imageHome/productivity.jpg" >
+                <source src="../assets/video_home/3_productivity.mp4"  >
+              </video>
             </div>
           </div>
           <div class="style_item__UR5ql">
             <h4>🚀 Product Promotion</h4>
             <div class="style_player__N8Vik">
-              <img src="../assets/imageHome/siemens.jpg" alt="siemens" />
+              <!-- <img src="../assets/imageHome/siemens.jpg" alt="siemens" />
               <button class="style_small__jRtII">
                 <i class="fas fa-play-circle"></i>
-              </button>
+              </button> -->
+              <video id="MainPageVideList" controls poster="../assets/imageHome/siemens.jpg" >
+                <source src="../assets/video_home/siemens.mp4"  >
+              </video>
             </div>
           </div>
           <div class="style_item__UR5ql">
             <h4>✈️ Tourism</h4>
             <div class="style_player__N8Vik">
-              <img src="../assets/imageHome/three.jpg" alt="three" />
+              <!-- <img src="../assets/imageHome/three.jpg" alt="three" />
               <button class="style_small__jRtII">
                 <i class="fas fa-play-circle"></i>
-              </button>
+              </button> -->
+              <video id="MainPageVideList" controls poster="../assets/imageHome/three.jpg" >
+                <source src="../assets/video_home/three.mp4"  >
+              </video>
             </div>
           </div>
           <div class="style_item__UR5ql">
             <h4>💻 Tutorial & walk-through</h4>
             <div class="style_player__N8Vik">
-              <img src="../assets/imageHome/explainer.jpg" alt="explainer" />
+              <!-- <img src="../assets/imageHome/explainer.jpg" alt="explainer" />
               <button class="style_small__jRtII">
                 <i class="fas fa-play-circle"></i>
-              </button>
+              </button> -->
+              <video id="MainPageVideList" controls poster="../assets/imageHome/explainer.jpg" >
+                <source src="../assets/video_home/explainer.mp4"  >
+              </video>
             </div>
           </div>
         </div>
@@ -292,55 +310,73 @@
           <div class="style_item__UR5ql">
             <h4>🇩🇪 German</h4>
             <div class="style_player__N8Vik">
-              <img src="../assets/image_section_2/astrazenca.jpg" />
+              <!-- <img src="../assets/image_section_2/astrazenca.jpg" />
               <button class="style_small__jRtII">
                 <i class="fas fa-play-circle"></i>
-              </button>
+              </button> -->
+              <video id="MainPageVideList" controls poster="../assets/image_section_2/astrazenca.jpg" >
+                <source src="../assets/video_home/astrazenca.mp4"  >
+              </video>
             </div>
           </div>
           <div class="style_item__UR5ql">
             <h4>🇪🇸 Spanish</h4>
             <div class="style_player__N8Vik">
-              <img src="../assets/image_section_2/nokia.jpg" />
+              <!-- <img src="../assets/image_section_2/nokia.jpg" />
               <button class="style_small__jRtII">
                 <i class="fas fa-play-circle"></i>
-              </button>
+              </button> -->
+              <video id="MainPageVideList" controls poster="../assets/image_section_2/nokia.jpg" >
+                <source src="../assets/video_home/nokia.mp4"  >
+              </video>
             </div>
           </div>
           <div class="style_item__UR5ql">
             <h4>🇫🇷 French</h4>
             <div class="style_player__N8Vik">
-              <img src="../assets/image_section_2/recession.jpg" />
+              <!-- <img src="../assets/image_section_2/recession.jpg" />
               <button class="style_small__jRtII">
                 <i class="fas fa-play-circle"></i>
-              </button>
+              </button> -->
+              <video id="MainPageVideList" controls poster="../assets/image_section_2/recession.jpg" >
+                <source src="../assets/video_home/recession.mp4"  >
+              </video>
             </div>
           </div>
           <div class="style_item__UR5ql">
             <h4>🇨🇳 Chinese</h4>
             <div class="style_player__N8Vik">
-              <img src="../assets/image_section_2/alibaba.jpg" />
+              <!-- <img src="../assets/image_section_2/alibaba.jpg" />
               <button class="style_small__jRtII">
                 <i class="fas fa-play-circle"></i>
-              </button>
+              </button> -->
+              <video id="MainPageVideList" controls poster="../assets/image_section_2/alibaba.jpg" >
+                <source src="../assets/video_home/alibaba.mp4"  >
+              </video>
             </div>
           </div>
           <div class="style_item__UR5ql">
             <h4>🇮🇳 Hindi</h4>
             <div class="style_player__N8Vik">
-              <img src="../assets/image_section_2/reliance.jpg" />
+              <!-- <img src="../assets/image_section_2/reliance.jpg" />
               <button class="style_small__jRtII">
                 <i class="fas fa-play-circle"></i>
-              </button>
+              </button> -->
+              <video id="MainPageVideList" controls poster="../assets/image_section_2/reliance.jpg" >
+                <source src="../assets/video_home/reliance.mp4"  >
+              </video>
             </div>
           </div>
           <div class="style_item__UR5ql">
             <h4>🇦🇪 Arabic</h4>
             <div class="style_player__N8Vik">
-              <img src="../assets/image_section_2/siemens.jpg" />
+              <!-- <img src="../assets/image_section_2/siemens.jpg" />
               <button class="style_small__jRtII">
                 <i class="fas fa-play-circle"></i>
-              </button>
+              </button> -->
+              <video id="MainPageVideList" controls poster="../assets/image_section_2/siemens.jpg" >
+                <source src="../assets/video_home/siemenss.mp4"  >
+              </video>
             </div>
           </div>
         </div>

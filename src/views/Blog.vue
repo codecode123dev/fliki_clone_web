@@ -1,4 +1,5 @@
 <template>
+    <router-view></router-view>
     <div class="style_main__ahEw1">
         <section class="style_heading__Mi0nk">
             <div class="style_wrapper__mgTHs style_wrapper__W696m">
@@ -8,7 +9,7 @@
         </section>
         <div class="style_list__dRhuk">
             <div class="style_wrapper__mgTHs style_wrapper__W696m" >
-                <a class="style_item__ZJUQX" href="#">
+                <router-link class="style_item__ZJUQX" :to="{name : 'ai_tool'}">
                     <div class="style_cover__DPSIa">
                         <img src="../assets/blog/image1.jpg" alt="blog" loading="lazy"/>
                     </div>
@@ -24,7 +25,7 @@
                             Read more →
                         </p>
                     </div>
-                </a>
+                </router-link>
                 <a class="style_item__ZJUQX" href="#">
                     <div class="style_cover__DPSIa">
                         <img src="../assets/blog/image2.jpg" alt="blog" loading="lazy"/>
@@ -191,6 +192,7 @@
                     </a>
                 </div>
             </section>
+            
         </div>
     </div>
 </template>

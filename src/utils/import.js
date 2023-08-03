@@ -9,4 +9,8 @@ export function loginGlobalComponent(app) {
     "default-layout",
     defineAsyncComponent(() => import("@/layout/default"))
   );
+  app.component(
+    "auth_admin-layout",
+    defineAsyncComponent(() => import("@/layout/auth_admin"))
+  )
 }
