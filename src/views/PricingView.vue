@@ -16,8 +16,20 @@
       <div class="style_wrapper__mgTHs style_wrapper__JQpkh">
         <div class="style_cycle__wasZr">
           <div class="style_switch__yv984">
-            <button>Pay monthly</button>
-            <button class="style_active___4Aod">
+            <!-- <button type="button" :class="{ style_active___4Aod : toggleClick}" @dblclick="onToggleClick($event)">Pay monthly</button>
+            <button type="button" :class="{ style_active___4Aod : toggleClick}" @dblclick="onToggleClick($event)"> -->
+            <button
+              type="button"
+              v-bind:class="{ white: !clickedButton1, '': clickedButton1 }"
+              @click="clickedButton1 = !clickedButton1"
+            >
+              Pay monthly
+            </button>
+            <button
+              type="button"
+              v-bind:class="{ white: clickedButton1, '': !clickedButton1 }"
+              @click="clickedButton1 = !clickedButton1"
+            >
               Pay yearly
               <span>⚡️25% off</span>
             </button>
@@ -72,7 +84,9 @@
             </div>
           </div>
           <div class="style_item___KEPt">
-            <div class="style_offer__aonly"></div>
+            <div 
+            v-bind:class="{ style_offer__aonly: clickedButton1, '': !clickedButton1 }" 
+            ></div>
             <div class="style_name__uE30W">
               <h2>
                 Basic
@@ -110,13 +124,19 @@
             </div>
             <div class="style_price__FJH9d">
               <h4>
-                <span class="style_original__ruhRz">
-                  <span class="font-sans-serif">$</span>
-                  8
+                <span 
+                v-bind:class="{ style_original__ruhRz: clickedButton1, '': !clickedButton1 }" 
+
+                >
+                  <span class="font-sans-serif">$8</span>
+                  
                 </span>
-                <span class="discounted">
-                  <span class="font-sans-serif">$</span>
-                  6
+                <span 
+                class="discounted"
+                v-bind:class="{ discountedInline: clickedButton1, '': !clickedButton1 }"
+                >
+                  <span class="font-sans-serif">$6</span>
+                  
                 </span>
               </h4>
               <p>per month</p>
@@ -135,7 +155,9 @@
             </div>
           </div>
           <div class="style_item___KEPt style_standard__FUrZV">
-            <div class="style_offer__aonly"></div>
+            <div 
+            v-bind:class="{ style_offer__aonly: clickedButton1, '': !clickedButton1 }" 
+            ></div>
             <div class="style_name__uE30W">
               <h2>
                 Standard
@@ -173,13 +195,18 @@
             </div>
             <div class="style_price__FJH9d">
               <h4 class="animation slide-up">
-                <span class="style_original__ruhRz">
-                  <span class="font-sans-serif">$</span>
-                  28
+                <span 
+                v-bind:class="{ style_original__ruhRz: clickedButton1, '': !clickedButton1 }" 
+                >
+                  <span class="font-sans-serif">$28</span>
+                  
                 </span>
-                <span class="discounted">
-                  <span class="font-sans-serif">$</span>
-                  21
+                <span 
+                class="discounted"
+                v-bind:class="{ discountedInline: clickedButton1, '': !clickedButton1 }"
+                >
+                  <span class="font-sans-serif">$21</span>
+                  
                 </span>
               </h4>
               <p>per month</p>
@@ -197,7 +224,9 @@
             </div>
           </div>
           <div class="style_item___KEPt">
-            <div class="style_offer__aonly"></div>
+            <div 
+            v-bind:class="{ style_offer__aonly : clickedButton1, '': !clickedButton1 }" 
+            ></div>
             <div class="style_name__uE30W">
               <h2>Premium</h2>
               <p>
@@ -236,13 +265,19 @@
             </div>
             <div class="style_price__FJH9d">
               <h4>
-                <span class="style_original__ruhRz">
-                  <span class="font-sans-serif">$</span>
-                  88
+                <span 
+                v-bind:class="{ style_original__ruhRz: clickedButton1, '': !clickedButton1 }" 
+                
+                >
+                  <span class="font-sans-serif">$88</span>
+                  
                 </span>
-                <span class="discounted">
-                  <span class="font-sans-serif">$</span>
-                  66
+                <span 
+                class="discounted"
+                v-bind:class="{ discountedInline: clickedButton1, '': !clickedButton1 }"
+                 >
+                  <span class="font-sans-serif">$66</span>
+                  
                 </span>
               </h4>
               <p>per month</p>
@@ -405,6 +440,8 @@
 export default {
   data() {
     return {
+      clickedButton1: false,
+      clickedButton2: false,
       features: [
         {
           id: 1,
@@ -694,7 +731,7 @@ ul {
   button {
   border: none;
   outline: none;
-  background: transparent;
+  /* background: transparent; */
   cursor: pointer;
   padding: 0.75rem 1.5rem;
   border-radius: 2rem;
@@ -1110,48 +1147,59 @@ tr {
   margin: 0 auto;
 }
 .style_faq___FTGB {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    margin-bottom: 4rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-bottom: 4rem;
 }
 .style_faq___FTGB .style_wrapper__JQpkh {
-    flex-direction: column;
-    border: 1px solid #eae4df;
-    background-color: #f9f2e8;
-    max-width: 768px;
-    border-radius: .5rem;
+  flex-direction: column;
+  border: 1px solid #eae4df;
+  background-color: #f9f2e8;
+  max-width: 768px;
+  border-radius: 0.5rem;
 }
 .style_faq___FTGB .style_wrapper__JQpkh h2 {
-    font-size: 1.3125rem;
-    line-height: 1.5rem;
-    margin-bottom: 2rem;
+  font-size: 1.3125rem;
+  line-height: 1.5rem;
+  margin-bottom: 2rem;
 }
 .style_faq___FTGB .style_wrapper__JQpkh .style_item___KEPt {
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 2rem;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 2rem;
 }
 .style_faq___FTGB .style_wrapper__JQpkh .style_item___KEPt h3 {
-    font-size: 1.3125rem;
-    line-height: 1.5rem;
-    margin-bottom: .25rem;
+  font-size: 1.3125rem;
+  line-height: 1.5rem;
+  margin-bottom: 0.25rem;
 }
 .style_faq___FTGB .style_wrapper__JQpkh .style_item___KEPt a {
-    text-decoration: underline;
+  text-decoration: underline;
 }
-@media (max-width: 1023px){
-  .style_hero__SOAP3 .style_wrapper__JQpkh, .style_plans__kBw1C .style_wrapper__JQpkh {
-      padding-top: 2rem;
-      padding-bottom: 2rem;
-
-}
-.style_plans__kBw1C .style_wrapper__JQpkh .style_list__GmqcG {
-    grid-template-columns: repeat(1,1fr);
-}
-.style_custom__E_4rF .style_wrapper__JQpkh {
+@media (max-width: 1023px) {
+  .style_hero__SOAP3 .style_wrapper__JQpkh,
+  .style_plans__kBw1C .style_wrapper__JQpkh {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+  }
+  .style_plans__kBw1C .style_wrapper__JQpkh .style_list__GmqcG {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .style_custom__E_4rF .style_wrapper__JQpkh {
     padding-top: 1rem;
     padding-bottom: 1rem;
+  }
 }
+
+.white {
+  background-color: #fff;
+}
+
+.discounted {
+    display: none;
+}
+.discountedInline{
+  display: inline;
 }
 </style>

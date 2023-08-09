@@ -9,7 +9,9 @@
     <section class="style_detail__sZyf_">
       <div class="style_wrapper__mgTHs style_wrapper__VptSC">
         <div class="style_content__QD50D">
-          <div class="style_tableOfContent__V4pKi">
+
+
+          <v-list class="style_tableOfContent__V4pKi" v-model:opened="open">
             <h3>
               <a href="#content">Contents</a>
             </h3>
@@ -19,296 +21,136 @@
                   <span>Introduction</span>
                 </a>
               </li>
-              <li>
-                <a href="#basics">
-                  <span>Basics</span>
-                  <i class="fas fa-chevron-down"></i>
-                </a>
-                <ol class="animation fade-in" style="display: none">
-                  <li>
-                    <a href="#languages">Languages</a>
-                  </li>
-                  <li>
-                    <a href="#dialect">Dialect</a>
-                  </li>
-                  <li>
-                    <a href="#gender">Gender</a>
-                  </li>
-                  <li>
-                    <a href="#voices">Voices</a>
-                  </li>
-                  <li>
-                    <a href="#voice-styles">Voice Styles</a>
-                  </li>
-                </ol>
-              </li>
-              <li>
-                <a href="#editor">
-                  <span>Editor</span>
-                  <i class="fas fa-chevron-down"></i>
-                </a>
-                <ol class="animation fade-in" style="display: none">
-                  <li>
-                    <a href="#audio-only-file">Audio only file</a>
-                  </li>
-                  <li>
-                    <a href="#scene">Scene</a>
-                  </li>
-                  <li>
-                    <a href="#emphasize">Emphasize</a>
-                  </li>
-                  <li>
-                    <a href="#pauses">Pauses</a>
-                  </li>
-                  <li>
-                    <a href="#pitch-and-rate">Pitch and Rate</a>
-                  </li>
-                  <li>
-                    <a href="#pronunciation">Pronunciation</a>
-                  </li>
-                  <li>
-                    <a href="#pronunciation-map">Pronunciation Map</a>
-                  </li>
-                  <li>
-                    <a href="#import-from-blog">Import from Blog</a>
-                  </li>
-                  <li>
-                    <a href="#settings">Settings</a>
-                  </li>
-                  <li>
-                    <a href="#customization-panel">Customization Panel</a>
-                  </li>
-                  <li>
-                    <a href="#translate">Translate</a>
-                  </li>
-                </ol>
-              </li>
-              <li>
-                <a href="#video-file">
-                  <span>Video File</span>
-                  <i class="fas fa-chevron-down"></i>
-                </a>
-                <ol class="animation fade-in" style="display: none">
-                  <li>
-                    <a href="#step-1-create-a-video-with-configuration"
-                      >Step 1 - Create a video with configuration</a
-                    >
-                  </li>
-                  <li>
-                    <a
-                      href="#step-2-select-voice-add-your-script-select-images-and-clips"
-                      >Step 2 - Select voice, add your script, select images and
-                      clips</a
-                    >
-                  </li>
-                  <li>
-                    <a
-                      href="#step-3-configure-the-subtitle-font-size-etc-add-background-music"
-                      >Step 3 - Configure the subtitle font, size, etc & add
-                      background music</a
-                    >
-                  </li>
-                </ol>
-              </li>
-              <li>
-                <a href="#podcasts">
-                  <span>Podcasts</span>
-                  <i class="fas fa-chevron-down"></i>
-                </a>
-                <ol class="animation fade-in" style="display: none">
-                  <li>
-                    <a href="#step-1-create-a-show">Step 1 - Create a show</a>
-                  </li>
-                  <li>
-                    <a href="#step-2-create-a-new-episode"
-                      >Step 2 - Create a new episode</a
-                    >
-                  </li>
-                  <li>
-                    <a href="#step-3-create-episode-content"
-                      >Step 3 - Create episode content</a
-                    >
-                  </li>
-                  <li>
-                    <a href="#step-4-preview">Step 4 - Preview</a>
-                  </li>
-                  <li>
-                    <a href="#step-5-share-publish">Step 5 - Share & Publish</a>
-                  </li>
-                </ol>
-              </li>
-              <li>
-                <a href="#books">
-                  <span>Books</span>
-                  <i class="fas fa-chevron-down"></i>
-                </a>
-                <ol class="animation fade-in" style="display: none">
-                  <li>
-                    <a href="#step-1-create-an-audiobook"
-                      >Step 1 - Create an audiobook</a
-                    >
-                  </li>
-                  <li>
-                    <a href="#step-2-create-a-new-chapter"
-                      >Step 2 - Create a new chapter</a
-                    >
-                  </li>
-                  <li>
-                    <a href="#step-3-add-chapter-content"
-                      >Step 3 - Add chapter content</a
-                    >
-                  </li>
-                  <li>
-                    <a href="#step-4-preview">Step 4 - Preview</a>
-                  </li>
-                  <li>
-                    <a href="#step-5-share">Step 5 - Share</a>
-                  </li>
-                </ol>
-              </li>
-              <li>
-                <a href="#features">
-                  <span>Features</span>
-                  <i class="fas fa-chevron-down"></i>
-                </a>
-                <ol class="animation fade-in" style="display: none">
-                  <li>
-                    <a href="#tweet-to-video">Tweet to Video</a>
-                  </li>
-                  <li>
-                    <a href="#blog-to-video">Blog to Video</a>
-                  </li>
-                  <li>
-                    <a href="#voice-cloning">Voice Cloning</a>
-                  </li>
-                  <li>
-                    <a href="#idea-to-video">Idea to Video</a>
-                  </li>
-                </ol>
-              </li>
-              <li>
-                <a href="#account-and-billing">
-                  <span>Account and Billing</span>
-                  <i class="fas fa-chevron-down"></i>
-                </a>
-                <ol class="animation fade-in" style="display: none">
-                  <li>
-                    <a href="#credits">Credits</a>
-                  </li>
-                  <li>
-                    <a href="#manage-and-update-billing"
-                      >Manage and Update Billing</a
-                    >
-                  </li>
-                  <li>
-                    <a href="#team">Team</a>
-                  </li>
-                  <li>
-                    <a href="#rewards">Rewards</a>
-                  </li>
-                  <li>
-                    <a href="#reset-your-account">Reset your account</a>
-                  </li>
-                  <li>
-                    <a href="#copyright-claims">Copyright Claims</a>
-                  </li>
-                </ol>
-              </li>
-              <li>
-                <a href="#frequently-asked-questions">
-                  <span>Frequently Asked Questions</span>
-                  <i class="fas fa-chevron-down"></i>
-                </a>
-                <ol class="animation fade-in" style="display: none">
-                  <li>
-                    <a href="#how-does-fliki-work">How does Fliki work?</a>
-                  </li>
-                  <li>
-                    <a href="#how-to-use-ai-art">How to use AI Art?</a>
-                  </li>
-                  <li>
-                    <a href="#who-owns-the-content">Who owns the content?</a>
-                  </li>
-                  <li>
-                    <a href="#what-is-your-refund-policy"
-                      >What is your refund policy?</a
-                    >
-                  </li>
-                  <li>
-                    <a href="#how-can-i-set-the-duration-of-a-scene"
-                      >How can I set the duration of a scene?</a
-                    >
-                  </li>
-                  <li>
-                    <a
-                      href="#how-to-change-the-format-in-which-subtitles-are-displayed"
-                      >How to change the format in which subtitles are
-                      displayed?</a
-                    >
-                  </li>
-                  <li>
-                    <a
-                      href="#can-i-translate-my-audiovideo-file-into-a-different-language"
-                      >Can I translate my audio/video file into a different
-                      language?</a
-                    >
-                  </li>
-                  <li>
-                    <a href="#can-i-add-upload-my-own-audio-files"
-                      >Can I add/ upload my own audio files?</a
-                    >
-                  </li>
-                  <li>
-                    <a href="#how-to-add-background-music"
-                      >How to add background music?</a
-                    >
-                  </li>
-                  <li>
-                    <a href="#what-are-ai-or-neural-network-based-voices"
-                      >What are AI or Neural Network-based voices?</a
-                    >
-                  </li>
-                  <li>
-                    <a href="#how-to-track-my-usage-or-view-my-credits"
-                      >How to track my usage or view my credits?</a
-                    >
-                  </li>
-                  <li>
-                    <a href="#how-to-change-my-password"
-                      >How to change my password?</a
-                    >
-                  </li>
-                  <li>
-                    <a href="#how-to-delete-my-account"
-                      >How to delete my account?</a
-                    >
-                  </li>
-                  <li>
-                    <a
-                      href="#do-you-offer-a-discount-for-nonprofits-and-educational-institutes"
-                      >Do you offer a discount for nonprofits and educational
-                      institutes?</a
-                    >
-                  </li>
-                  <li>
-                    <a href="#how-to-apply-a-discount-code"
-                      >How to apply a discount code?</a
-                    >
-                  </li>
-                  <li>
-                    <a href="#does-fliki-have-a-public-roadmap"
-                      >Does Fliki have a public roadmap?</a
-                    >
-                  </li>
-                  <li>
-                    <a href="#is-this-created-by-the-people-from-rytr"
-                      >Is this created by the people from Rytr?</a
-                    >
-                  </li>
-                </ol>
-              </li>
+
+              <v-list-group value="Basics">
+
+                <template v-slot:activator="{ props }">
+                  <v-list-item v-bind="props" title="Basics" style="padding: 0; min-height: 20px;" ></v-list-item>
+                </template>
+
+                <v-list-item
+                  v-for="([title], i) in basics"
+                  :key="i"
+                  :title="title"
+                  :value="title"
+                ></v-list-item>
+              </v-list-group>
+
+              <v-list-group value="Editor">
+
+                <template v-slot:activator="{ props }">
+                  <v-list-item v-bind="props" title="Editor" style="padding: 0; min-height: 20px;" ></v-list-item>
+                </template>
+
+                <v-list-item
+                  v-for="([title], i) in editor"
+                  :key="i"
+                  :title="title"
+                  :value="title"
+                ></v-list-item>
+              </v-list-group>
+
+
+              <v-list-group value="Video">
+
+                <template v-slot:activator="{ props }">
+                  <v-list-item v-bind="props" title="Video File" style="padding: 0; min-height: 20px;" ></v-list-item>
+                </template>
+
+                <v-list-item
+                  v-for="([title], i) in video"
+                  :key="i"
+                  :title="title"
+                  :value="title"
+                ></v-list-item>
+              </v-list-group>
+
+
+              <v-list-group value="Podcasts">
+
+                <template v-slot:activator="{ props }">
+                  <v-list-item v-bind="props" title="Podcasts" style="padding: 0; min-height: 20px;" ></v-list-item>
+                </template>
+
+                <v-list-item
+                  v-for="([title], i) in podcasts"
+                  :key="i"
+                  :title="title"
+                  :value="title"
+                ></v-list-item>
+              </v-list-group>
+
+              <v-list-group value="Books">
+
+                <template v-slot:activator="{ props }">
+                  <v-list-item v-bind="props" title="Books" style="padding: 0; min-height: 20px;" ></v-list-item>
+                </template>
+
+                <v-list-item
+                  v-for="([title], i) in books"
+                  :key="i"
+                  :title="title"
+                  :value="title"
+                ></v-list-item>
+              </v-list-group>
+
+
+              <v-list-group value="Features">
+
+                <template v-slot:activator="{ props }">
+                  <v-list-item v-bind="props" title="Features" style="padding: 0; min-height: 20px;" ></v-list-item>
+                </template>
+
+                <v-list-item
+                  v-for="([title], i) in features"
+                  :key="i"
+                  :title="title"
+                  :value="title"
+                ></v-list-item>
+              </v-list-group>
+
+              <v-list-group value="Billing">
+
+                <template v-slot:activator="{ props }">
+                  <v-list-item v-bind="props" title="Account and Billing" style="padding: 0; min-height: 20px;" ></v-list-item>
+                </template>
+
+                <v-list-item
+                  v-for="([title], i) in billing"
+                  :key="i"
+                  :title="title"
+                  :value="title"
+                ></v-list-item>
+              </v-list-group>
+              
+              
+              <v-list-group value="Frequently">
+
+                <template v-slot:activator="{ props }">
+                  <v-list-item v-bind="props" title="Frequently Asked Questions" style="padding: 0; min-height: 20px;" ></v-list-item>
+                </template>
+
+                <v-list-item
+                  v-for="([title], i) in frequently"
+                  :key="i"
+                  :title="title"
+                  :value="title"
+                ></v-list-item>
+              </v-list-group>
+
+              
+              
+              
+              
+              
+              
+              
             </ol>
-          </div>
+          </v-list>
+
+
+
+
           <article class="style_blocks__TG2Zi">
             <h2 id="introduction">Introduction</h2>
             <p>👋 Hey!</p>
@@ -1768,8 +1610,79 @@
     </section>
   </div>
 </template>
-
-<style scoped>
+<script>
+  export default {
+    data: () => ({
+      open: ['Users'],
+      basics: [['Languages'], ['Dialect'], ['Gender'] ,['Voices'] , ['Voice Styles']],
+      editor: [
+        ['Audio only file'], 
+        ['Scene'], 
+        ['Emphasize'], 
+        ['Pauses'], 
+        ['Pitch and Rate'],
+        ['Pronunciation'], 
+        ['Import from Blog'], 
+        ['Settings'], 
+        ['Customization Panel'], 
+        ['Translate'],
+      ],
+      video: [
+        ['Step 1 - Create a video with configuration'], 
+        ['Step 2 - Select voice, add your script, select images and clips'], 
+        ['Step 3 - Configure the subtitle font, size, etc & add background music'], 
+      ],
+      podcasts: [
+        ['Step 1 - Create a show'], 
+        ['Step 2 - Create a new episode'], 
+        ['Step 3 - Create episode content'], 
+        ['Step 4 - Preview'], 
+        ['Step 5 - Share & Publish'], 
+      ],
+      books: [
+        ['Step 1 - Create an audiobook'], 
+        ['Step 2 - Create a new chapter'], 
+        ['Step 3 - Add chapter content'], 
+        ['Step 4 - Preview'], 
+        ['Step 5 - Share'], 
+      ],
+      features: [
+        ['Tweet to Video'], 
+        ['Blog to Video'], 
+        ['Voice Cloning'], 
+        ['Idea to Video'], 
+      ],
+      billing: [
+        ['Credits'], 
+        ['Manage and Update Billing'], 
+        ['Team'], 
+        ['Rewards'], 
+        ['Reset your account'], 
+        ['Copyright Claims'], 
+      ],
+      frequently: [
+        ['How does Fliki work?'], 
+        ['How to use AI Art?'], 
+        ['Who owns the content?'], 
+        ['What is your refund policy?'], 
+        ['How can I set the duration of a scene?'], 
+        ['How to change the format in which subtitles are displayed?'], 
+        ['Can I translate my audio/video file into a different language?'], 
+        ['Can I add/ upload my own audio files?'], 
+        ['How to add background music?'], 
+        ['What are AI or Neural Network-based voices?'], 
+        ['How to track my usage or view my credits?'], 
+        ['How to change my password?'], 
+        ['How to delete my account?'], 
+        ['Do you offer a discount for nonprofits and educational institutes?'], 
+        ['How to apply a discount code?'], 
+        ['Does Fliki have a public roadmap?'], 
+        ['Is this created by the people from Rytr?'], 
+      ],
+    }),
+  }
+</script>
+<style>
 .style_main__ahEw1 {
   display: flex;
   flex-direction: column;
@@ -1853,7 +1766,7 @@ ul {
   flex-direction: column;
   position: sticky;
   top: 0;
-  width: 40rem;
+  width: 50rem;
   margin-right: 2.5rem;
   padding: 1rem;
   font-size: 0.9rem;
@@ -2010,6 +1923,36 @@ strong {
     margin-top: .25rem!important;
     padding: 0!important;
     list-style: decimal!important;
+}
+.style_detail__sZyf_ .style_wrapper__VptSC .style_content__QD50D .style_tableOfContent__V4pKi ol .v-list-group {
+    font-weight: 600;
+    padding-top: 0.75rem;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+}
+
+.v-list-item-title {
+    font-size: .9rem;
+    font-weight: 600;
+}
+.v-list-item-title:hover {
+    color: #b0003a;
+}
+.v-list-item__prepend > .v-icon, .v-list-item__append > .v-icon {
+    opacity: 1;
+    font-size: 1rem;
+}
+.v-list-item:hover > .v-list-item__overlay {
+    opacity: 0;
+}
+.v-list-group__items .v-list-item {
+    padding-inline-start: 1rem ;
+}
+.v-list-item--density-default.v-list-item--one-line {
+    min-height: 30px;
+    padding-top: 4px;
+    padding-bottom: 4px;
 }
 @media (max-width: 1023px){
   .style_detail__sZyf_ {

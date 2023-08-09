@@ -25,7 +25,7 @@
             <span>Files</span>
           <!-- </a> -->
         </router-link>
-        <router-link :to="{name: 'podcasts'}">
+        <router-link :to="{name: 'podcast_home'}">
           <!-- <a class="notranslate" href="#"> -->
             <img
               src="../assets/login_admin/wi_img.png"
@@ -36,7 +36,7 @@
             <span>Podcast</span>
           <!-- </a> -->
         </router-link>
-        <router-link :to="{name: 'books'}">
+        <router-link :to="{name: 'book_home'}">
           <!-- <a class="notranslate" href="#"> -->
             <img
               src="../assets/login_admin/book_img.png"
@@ -49,24 +49,30 @@
         </router-link>
       </div>
       <div class="_right_1hgra_18">
-        <a class="_upgrade_1hgra_23" href="#">
-          <img
-            src="../assets/login_admin/upgrade_img.png"
-            width="20"
-            height="20"
-            alt="image"
-          />
-          Upgrade
-        </a>
-        <a class="notranslate">
-          <img
-            src="../assets/login_admin/account.png"
-            alt="image"
-            width="20"
-            height="20"
-          />
-          <span> Account </span>
-        </a>
+        <router-link :to="{name: 'account_home'}" class="_upgrade_1hgra_23">
+          <!-- <a class="_upgrade_1hgra_23" href="#"> -->
+            <img
+              src="../assets/login_admin/upgrade_img.png"
+              width="20"
+              height="20"
+              alt="image"
+            />
+            Upgrade
+          <!-- </a> -->
+        </router-link>
+        <router-link :to="{name: 'account_home'}" class="notranslate">
+
+          <!-- <a class="notranslate"> -->
+            <img
+              src="../assets/login_admin/account.png"
+              alt="image"
+              width="20"
+              height="20"
+            />
+            <span> Account </span>
+          <!-- </a> -->
+
+        </router-link>
         <button type="button">
           <img
             src="../assets/login_admin/sun.png"
@@ -75,7 +81,7 @@
             alt="image"
           />
         </button>
-        <div type="button">
+        <!-- <div type="button">
           <button>
             <img
               src="../assets/login_admin/question.png"
@@ -84,11 +90,72 @@
               alt="image"
             />
           </button>
+        </div> -->
+
+        <div>
+          <v-menu :location="bottom">
+            <template v-slot:activator="{ props }">
+              <button>
+            <img
+              src="../assets/login_admin/question.png"
+              height="20"
+              width="20"
+              alt="image"
+              v-bind="props"
+            />
+          </button>
+              <!-- <v-btn v-bind="props"> Dropdown </v-btn> -->
+            </template>
+
+            <!-- <v-list> -->
+              <v-list-item data-radix-menu-content>
+                <v-list-item-title data-radix-collection-item>
+                  <img src="../assets/nav_img/youtube_img.png" width="16" height="16" alt="image">
+                  Watch tutorial video
+                </v-list-item-title>
+                <a>
+                  <v-list-item-title data-radix-collection-item>
+                    <img src="../assets/nav_img/resource_img.png" width="16" height="16" alt="image">
+                    Resources and guide
+                  </v-list-item-title>
+                </a>
+                <a>
+                  <v-list-item-title data-radix-collection-item>
+                    <img src="../assets/nav_img/whatnew_img.png" width="16" height="16" alt="image">
+                    What's new
+                  </v-list-item-title>
+                </a>
+                <a>
+                  <v-list-item-title data-radix-collection-item>
+                    <img src="../assets/nav_img/comunity_img.png" width="16" height="16" alt="image">
+                    Community
+                  </v-list-item-title>
+                </a>
+                <a>
+                  <v-list-item-title data-radix-collection-item>
+                    <img src="../assets/nav_img/email_img.png" width="16" height="16" alt="image">
+                    Send us an email
+                  </v-list-item-title>
+                </a>
+              </v-list-item>
+            <!-- </v-list> -->
+          </v-menu>
         </div>
+
+
+
+
+        
       </div>
     </nav>
   </header>
 </template>
+<script>
+  export default {
+    data: () => ({
+    }),
+  }
+</script>
 <style scoped>
 ._header_1hgra_1 {
   display: flex;
@@ -308,5 +375,50 @@ button {
 ._header_1hgra_1 nav ._right_1hgra_18 a._active_1hgra_109 {
   opacity: 1;
   color: hsl(336, 73.7%, 53.5%);
+}
+[data-radix-menu-content] {
+    display: flex;
+    flex-direction: column;
+    border-radius: 1rem;
+    box-shadow: #0f0f0f0d 0 0 0 1px, #0f0f0f1a 0 3px 6px, #0f0f0f33 0 9px 24px;
+    animation-name: fadein;
+    animation-duration: .2s;
+    animation-fill-mode: forwards;
+    opacity: 0;
+    will-change: opacity;
+    overflow: hidden;
+    padding: .5rem 0;
+    background-color: hsl(0, 0%, 99%);
+    border: 1px solid hsl(0, 0%, 88.7%);
+    min-width: 10rem;
+    z-index: 12;
+}
+
+[data-radix-menu-content] [data-radix-collection-item] {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: .5rem 1rem;
+    outline: none;
+    cursor: pointer;
+    transition: all .1s;
+    font-weight: 600;
+    font-size: .9rem;
+    color: hsl(0, 0%, 9%);
+}
+
+@keyframes fadein {
+  0% {
+    opacity: 0;
+}
+100% {
+    opacity: 1;
+}
+}
+[data-radix-menu-content] [data-radix-collection-item] img {
+    margin-right: .35rem;
+}
+[data-radix-menu-content] [data-radix-collection-item][data-v-a331a258]:hover {
+    background-color: hsla(0, 0%, 0%, 0.071);
 }
 </style>

@@ -6,6 +6,7 @@
         <i class="fas fa-chevron-down"></i>
       </div>
       <div class="_actions_154g4_11">
+        <router-link :to="{name: 'create_book'}">
         <button
           class="style-module_button__-niPX style-module_primary__FOp7N style-module_medium__ASKee"
         >
@@ -17,6 +18,7 @@
             <span>New book</span>
           </span>
         </button>
+        </router-link>
       </div>
 
     </div>
@@ -32,7 +34,9 @@
                 <div class="style-module_bodyItemEmpty__ECkp2">
                     <p>
                         No books yet. Create a new 
-                        <a>book</a>
+                        <router-link :to="{name: 'create_book'}">
+                          <a>book</a>
+                        </router-link>
                         .
                     </p>
                 </div>

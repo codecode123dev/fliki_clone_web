@@ -425,6 +425,11 @@ button {
   color: hsl(0, 0%, 43.5%);
   margin-top: 0.5rem;
 }
+.style-module_button__-niPX a {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
 @keyframes slideUp {
   0% {
     transform: translateY(0.5rem);

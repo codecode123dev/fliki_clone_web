@@ -8,15 +8,17 @@
           text to video tool
         </h2>
         <div class="style_cta__XKuoA">
-          <a>
-            <button
-              class="style-module_button__-niPX style-module_primary__FOp7N style-module_large__3rvem"
-            >
-              Start for free
-              <span class="style-module_spacing__fGq8-"></span>
-              <i class="fas fa-arrow-right"></i>
-            </button>
-          </a>
+          <router-link :to="{name: 'login'}">
+            <!-- <a> -->
+              <button
+                class="style-module_button__-niPX style-module_primary__FOp7N style-module_large__3rvem"
+              >
+                Start for free
+                <span class="style-module_spacing__fGq8-"></span>
+                <i class="fas fa-arrow-right"></i>
+              </button>
+            <!-- </a> -->
+          </router-link>
           <p>No credit card required</p>
         </div>
         <div class="style_gradient__TGDZj"></div>
