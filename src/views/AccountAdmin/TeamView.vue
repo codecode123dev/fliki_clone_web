@@ -39,14 +39,10 @@
                         <p class="style-module_label__QBJfY">Organization name</p>
                         <input type="text" placeholder="eg: Acme Inc." required name="name" maxlength="20" value>
                     </div>
-
-
                     <div class="style-module_input__8lk6o style-module_widthAuto__vceco">
                         <p class="style-module_label__QBJfY">Organization website</p>
                         <input type="url" placeholder="eg: https://example.com" required name="website" value>
                     </div>
-
-
                     <div>
                         <button class="style-module_button__-niPX style-module_primary__FOp7N style-module_medium__ASKee" type="submit">
                             <span>

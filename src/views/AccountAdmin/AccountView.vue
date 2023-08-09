@@ -170,9 +170,9 @@
                     <span class="_original_1w8a5_35">
                       <span class="font-sans-serif">$</span>
                       28
-                      <span class="font-sans-serif">$</span>
-                      <span>21</span>
                     </span>
+                    <span class="font-sans-serif">$</span>
+                    <span>21</span>
                     <span>/month</span>
                   </h4>
                   <div class="_billings_1w8a5_43">
@@ -806,5 +806,9 @@ a {
 
 .showSubscribeToFliki{
   display: none;
+}
+._payment_1w8a5_1 ._form_1w8a5_12 ._top_1w8a5_20 ._price_1w8a5_29 ._original_1w8a5_35 {
+    font-weight: 400;
+    text-decoration: line-through;
 }
 </style>
