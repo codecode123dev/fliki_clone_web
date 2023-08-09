@@ -1,15 +1,17 @@
 <template>
   <div class="_menu_1mq9d_8">
     <div class="_top_1mq9d_20">
-      <a class="_item_1mq9d_25 _active_1mq9d_49" href="#">
-        <img
-          src="../../assets/account_image/credit_img.png"
-          width="16"
-          height="16"
-          alt="image"
-        />
-        Credits
-      </a>
+      <router-link :to="{name :'account_home'}" class="_item_1mq9d_25 _active_1mq9d_49">
+        <!-- <a class="_item_1mq9d_25 _active_1mq9d_49" href="#"> -->
+          <img
+            src="../../assets/account_image/credit_img.png"
+            width="16"
+            height="16"
+            alt="image"
+          />
+          Credits
+        <!-- </a> -->
+      </router-link>
       <router-link
         :to="{ name: 'reward_account' }"
         class="_item_1mq9d_25 _active_1mq9d_49"
@@ -126,14 +128,16 @@
               Are you sure you want to logout?
             </p>
             <div class="AlertDialogActions">
-              <button
-                class="style-module_button__-niPX style-module_primary__FOp7N style-module_medium__ASKee"
-                type="button"
-              >
-                <span>
-                  <span>Logout</span>
-                </span>
-              </button>
+              <router-link :to="{name: 'login'}">
+                <button
+                  class="style-module_button__-niPX style-module_primary__FOp7N style-module_medium__ASKee"
+                  type="button"
+                >
+                  <span>
+                    <span>Logout</span>
+                  </span>
+                </button>
+              </router-link>
               <button
                 class="style-module_button__-niPX style-module_text__uHJEq style-module_medium__ASKee"
                 type="button"
