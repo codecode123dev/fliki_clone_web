@@ -29,10 +29,10 @@
           </span>
         </button> -->
         <v-btn
-        @click="dialog = true"
-        class="style-module_button__-niPX style-module_primary__FOp7N style-module_medium__ASKee"
+          @click="dialog = true"
+          class="style-module_button__-niPX style-module_primary__FOp7N style-module_medium__ASKee"
         >
-        <span>
+          <span>
             <span>
               <img
                 src="@/assets/login_admin/files_plus.png"
@@ -49,41 +49,69 @@
         <v-dialog v-model="dialog" width="auto">
           <v-card>
             <v-card-text>
-              
               <!-- <div id="radix-:r28:" aria-describedby="radix-:r2a:" aria-labelledby="radix-:r29:" data-state="open" class="DialogContent" tabindex="-1" style="max-width: 20rem; pointer-events: auto;">  -->
-                  <div class="DialogHeader">
-                    <p>New file</p>
-                    <button @click="dialog = false">
-                      <img src="../../assets/files_image/three_dot/close_img.png" width="16" height="16" alt="image">
-                    </button>
-                  </div>
+              <div class="DialogHeader">
+                <p>New file</p>
+                <button @click="dialog = false">
+                  <img
+                    src="../../assets/files_image/three_dot/close_img.png"
+                    width="16"
+                    height="16"
+                    alt="image"
+                  />
+                </button>
+              </div>
               <form>
                 <div class="DialogContentContainer">
-                  <div class="style-module_input__8lk6o style-module_widthFull__EQnlX">
-                    <v-text-field placeholder="Enter file name" variant="outlined" class="title_field" ></v-text-field>
+                  <div
+                    class="style-module_input__8lk6o style-module_widthFull__EQnlX"
+                  >
+                    <v-text-field
+                      placeholder="Enter file name"
+                      variant="outlined"
+                      class="title_field"
+                    ></v-text-field>
                   </div>
-                  <div class="style-module_input__8lk6o style-module_widthFull__EQnlX">
+                  <div
+                    class="style-module_input__8lk6o style-module_widthFull__EQnlX"
+                  >
                     <v-select
                       :items="['English']"
                       variant="outlined"
                       class="select-category"
                       placeholder="Select language"
-
                     ></v-select>
                   </div>
-                  <div class="style-module_input__8lk6o style-module_widthFull__EQnlX">
+                  <div
+                    class="style-module_input__8lk6o style-module_widthFull__EQnlX"
+                  >
                     <v-radio-group inline>
-                      <v-radio color="hsl(336, 73.7%, 53.5%)" label="Audio only" value="1"></v-radio>
-                      <v-radio color="hsl(336, 73.7%, 53.5%)" label="Video" value="2"></v-radio>
+                      <v-radio
+                        color="hsl(336, 73.7%, 53.5%)"
+                        label="Audio only"
+                        value="1"
+                      ></v-radio>
+                      <v-radio
+                        color="hsl(336, 73.7%, 53.5%)"
+                        label="Video"
+                        value="2"
+                      ></v-radio>
                     </v-radio-group>
                   </div>
                 </div>
               </form>
               <div class="DialogActions">
-                <button class="style-module_button__-niPX style-module_primary__FOp7N style-module_medium__ASKee" >
+                <button
+                  class="style-module_button__-niPX style-module_primary__FOp7N style-module_medium__ASKee"
+                >
                   <span>
                     <span>
-                      <img src="../../assets/files_image/three_dot/tick_img.png" alt="img" width="16" height="16">
+                      <img
+                        src="../../assets/files_image/three_dot/tick_img.png"
+                        alt="img"
+                        width="16"
+                        height="16"
+                      />
                       <span class="style-module_spacing__fGq8-"></span>
                     </span>
                     <span>Submit</span>
@@ -134,17 +162,17 @@
         </button> -->
 
         <v-btn
-        @click="selectDialog = true"
+          @click="selectDialog = true"
           class="style-module_button__-niPX style-module_text__uHJEq style-module_medium__ASKee"
         >
-        <span>
+          <span>
             <span>
               <img
-                  src="@/assets/login_admin/tutorial.png"
-                  alt="image"
-                  width="16"
-                  height="16"
-                />
+                src="@/assets/login_admin/tutorial.png"
+                alt="image"
+                width="16"
+                height="16"
+              />
               <span class="style-module_spacing__fGq8-"></span>
             </span>
             <span> Tutorial </span>
@@ -154,21 +182,31 @@
         <v-dialog v-model="selectDialog" width="50%">
           <v-card>
             <v-card-text>
-              
               <!-- <div id="radix-:r28:" aria-describedby="radix-:r2a:" aria-labelledby="radix-:r29:" data-state="open" class="DialogContent" tabindex="-1" style="max-width: 20rem; pointer-events: auto;">  -->
-                  <div class="DialogHeader">
-                    <p>How to create videos and voiceover</p>
-                    <button @click="selectDialog = false">
-                      <img src="../../assets/files_image/three_dot/close_img.png" width="16" height="16" alt="image">
-                    </button>
-                  </div>
-              <div class="DialogContentContainer DialogContentContainerVideo"> 
-                <video controls autoplay style="width: 100%;">
-                  <source src="../../assets/files_image/audio/video_file-720.mp4" type="video/mp4"/>
+              <div class="DialogHeader">
+                <p>How to create videos and voiceover</p>
+                <button @click="selectDialog = false">
+                  <img
+                    src="../../assets/files_image/three_dot/close_img.png"
+                    width="16"
+                    height="16"
+                    alt="image"
+                  />
+                </button>
+              </div>
+              <div class="DialogContentContainer">
+                <video controls autoplay style="width: 100%">
+                  <source
+                    src="../../assets/files_image/audio/video_file-720.mp4"
+                    type="video/mp4"
+                  />
                 </video>
               </div>
               <div class="DialogActions">
-                <button class="style-module_button__-niPX style-module_text__uHJEq style-module_medium__ASKee"  @click="selectDialog = false" >
+                <button
+                  class="style-module_button__-niPX style-module_text__uHJEq style-module_medium__ASKee"
+                  @click="selectDialog = false"
+                >
                   <span>
                     <span>Close</span>
                   </span>
@@ -177,10 +215,6 @@
             </v-card-text>
           </v-card>
         </v-dialog>
-
-
-
-
 
 
       </div>
@@ -230,7 +264,6 @@
             >
               Jul 31, 02:17 pm
             </div>
-
 
             <div
               class="style-module_bodyItemColumn__bwSo0 style-module_action__zsYAQ"
@@ -350,8 +383,6 @@
                   </v-list-item>
                 </v-list>
               </v-menu>
-
-
             </div>
           </div>
           <div class="style-module_bodyItem__oV1ky">
@@ -912,86 +943,99 @@ button.style-module_button__-niPX.style-module_text__uHJEq.style-module_medium__
   background-color: hsla(0, 0%, 0%, 0.071);
 }
 .DialogContent {
-    display: flex;
-    flex-direction: column;
-    border-radius: .75rem;
-    background-color: hsl(0, 0%, 99%);
-    box-shadow: #0f0f0f0d 0 0 0 1px, #0f0f0f1a 0 3px 6px, #0f0f0f33 0 9px 24px;
-    padding: 0;
-    overflow: hidden;
-    transform: translateZ(0);
-    will-change: transform;
-    animation-name: scaleIn;
-    animation-duration: .3s;
-    animation-fill-mode: forwards;
-    opacity: 0;
-    outline: none;
-    margin: 10vh auto;
-    width: 90vw;
+  display: flex;
+  flex-direction: column;
+  border-radius: 0.75rem;
+  background-color: hsl(0, 0%, 99%);
+  box-shadow: #0f0f0f0d 0 0 0 1px, #0f0f0f1a 0 3px 6px, #0f0f0f33 0 9px 24px;
+  padding: 0;
+  overflow: hidden;
+  transform: translateZ(0);
+  will-change: transform;
+  animation-name: scaleIn;
+  animation-duration: 0.3s;
+  animation-fill-mode: forwards;
+  opacity: 0;
+  outline: none;
+  margin: 10vh auto;
+  width: 90vw;
 }
-@keyframes scaleIn{
+@keyframes scaleIn {
   0% {
-    transform: scale(.9);
-    opacity: .5;
-}
+    transform: scale(0.9);
+    opacity: 0.5;
+  }
   100% {
-      transform: scale(1);
-      opacity: 1;
+    transform: scale(1);
+    opacity: 1;
   }
 }
 .DialogContent .DialogHeader {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    padding: .5rem 1.25rem;
-    border-bottom: 1px solid hsl(0, 0%, 90.9%);
-    background-color: hsl(0, 0%, 97.3%);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 0.5rem 1.25rem;
+  border-bottom: 1px solid hsl(0, 0%, 90.9%);
+  background-color: hsl(0, 0%, 97.3%);
 }
-h1, h2, h3, h4, h5, h6, p, a, ul, li, label, input, textarea, select {
-    margin: 0;
-    padding: 0;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+a,
+ul,
+li,
+label,
+input,
+textarea,
+select {
+  margin: 0;
+  padding: 0;
 }
 .DialogContent .DialogHeader p {
-    display: flex;
-    flex: 1;
-    font-weight: 600;
-    color: hsl(0, 0%, 9%);
+  display: flex;
+  flex: 1;
+  font-weight: 600;
+  color: hsl(0, 0%, 9%);
 }
 button {
-    transition: all .1s;
+  transition: all 0.1s;
 }
 .DialogHeader button {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    outline: none;
-    border: none;
-    background: transparent;
-    cursor: pointer;
-    border-radius: 1rem;
-    height: 1.75rem;
-    width: 1.75rem;
-    padding: 0;
-    transition: background-color .2s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  outline: none;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  border-radius: 1rem;
+  height: 1.75rem;
+  width: 1.75rem;
+  padding: 0;
+  transition: background-color 0.2s;
 }
 .DialogContent .DialogHeader button:hover {
-    background-color: hsl(0, 0%, 88.7%);
+  background-color: hsl(0, 0%, 88.7%);
 }
 .v-dialog > .v-overlay__content > .v-card > .v-card-text {
-    font-size: inherit;
-    letter-spacing: 0.03125em;
-    line-height: inherit;
-    padding: 0;
+  font-size: inherit;
+  letter-spacing: 0.03125em;
+  line-height: inherit;
+  padding: 0;
 }
-.DialogHeader{
+.DialogHeader {
   display: flex;
   flex-direction: row;
   align-items: center;
   background-color: hsl(0, 0%, 97.3%);
-  padding: .5rem 1.25rem;
+  padding: 0.5rem 1.25rem;
   border-bottom: 1px solid hsl(0, 0%, 90.9%);
 }
-.DialogHeader p{
+.DialogHeader p {
   display: flex;
   flex: 1;
 }
@@ -1109,118 +1153,124 @@ button {
 .style-module_button__-niPX.style-module_text__uHJEq {
   color: hsl(0, 0%, 43.5%);
 }
-._picker_1paap_1 ._preview_1paap_8 img, ._picker_1paap_1 ._preview_1paap_8 svg, ._picker_1paap_1 ._preview_1paap_8 video {
-    width: 100%;
-    height: 100%;
-    transition: border .2s;
-    position: absolute;
-    object-fit: cover;
-    z-index: 0;
-    cursor: pointer;
+._picker_1paap_1 ._preview_1paap_8 img,
+._picker_1paap_1 ._preview_1paap_8 svg,
+._picker_1paap_1 ._preview_1paap_8 video {
+  width: 100%;
+  height: 100%;
+  transition: border 0.2s;
+  position: absolute;
+  object-fit: cover;
+  z-index: 0;
+  cursor: pointer;
 }
 .published_checkbox .v-selection-control__input input {
-    cursor: pointer;
-    position: absolute;
-    left: 11px;
-    top: 0;
-    width: 45%;
-    height: 100%;
-    opacity: none;
+  cursor: pointer;
+  position: absolute;
+  left: 11px;
+  top: 0;
+  width: 45%;
+  height: 100%;
+  opacity: none;
 }
 .published_checkbox .v-selection-control__input {
-    width: var(--v-selection-control-size);
-    height: var(--v-selection-control-size);
-    align-items: center;
-    display: flex;
-    flex: none;
-    justify-content: center;
-    position: relative;
-    border-radius: 50%;
-    left: -9px;
+  width: var(--v-selection-control-size);
+  height: var(--v-selection-control-size);
+  align-items: center;
+  display: flex;
+  flex: none;
+  justify-content: center;
+  position: relative;
+  border-radius: 50%;
+  left: -9px;
 }
 ._save_yry9z_1 ._content_yry9z_11 form ._actions_yry9z_38 {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    padding: 1rem 0;
-    border-top: 1px solid hsl(0, 0%, 88.7%);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 1rem 0;
+  border-top: 1px solid hsl(0, 0%, 88.7%);
 }
 
 .style-module_button__-niPX.style-module_medium__ASKee {
-    height: 2.15rem;
-    padding: 0 1rem;
-    border-radius: 1.75rem;
-    font-size: .9rem;
+  height: 2.15rem;
+  padding: 0 1rem;
+  border-radius: 1.75rem;
+  font-size: 0.9rem;
 }
 .style-module_button__-niPX.style-module_primary__FOp7N {
   background-color: hsl(336, 75%, 47.2%);
-  color:hsl(0, 0%, 95.1%);
+  color: hsl(0, 0%, 95.1%);
 }
 ._save_yry9z_1 ._content_yry9z_11 form ._actions_yry9z_38 button {
-    margin-right: 1rem;
+  margin-right: 1rem;
 }
 .style-module_button__-niPX span {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
 }
-.style-module_button__-niPX.style-module_medium__ASKee .style-module_spacing__fGq8- {
-    width: .35rem;
+.style-module_button__-niPX.style-module_medium__ASKee
+  .style-module_spacing__fGq8- {
+  width: 0.35rem;
 }
 .style-module_button__-niPX.style-module_text__uHJEq:hover {
-    color: hsl(0, 0%, 9%);
+  color: hsl(0, 0%, 9%);
 }
 ._save_yry9z_1 ._content_yry9z_11 form ._actions_yry9z_38 button {
-    margin-right: 1rem;
+  margin-right: 1rem;
 }
 .style-module_button__-niPX.style-module_primary__FOp7N:hover {
-    background-color: hsl(336, 80%, 57.8%);
+  background-color: hsl(336, 80%, 57.8%);
 }
 ._save_yry9z_1 ._content_yry9z_11 form {
-    max-width: 32rem;
+  max-width: 32rem;
 }
-.v-input__details{
+.v-input__details {
   display: none;
 }
 .style-module_input__8lk6o {
-    margin-bottom: .8rem;
+  margin-bottom: 0.8rem;
 }
 .style-module_input__8lk6o .style-module_label__QBJfY {
-    margin-bottom: .25rem;
+  margin-bottom: 0.25rem;
 }
 .DialogContentContainer {
-    display: flex;
-    flex-direction: column;
-    flex: 1;
-    padding: 1rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  padding: 1rem 1.5rem;
 }
 .style-module_input__8lk6o {
-    margin-bottom: 1.5rem;
+  margin-bottom: 1.5rem;
 }
-.style-module_widthFull__EQnlX, .style-module_widthFull__EQnlX input, .style-module_widthFull__EQnlX textarea, .style-module_widthFull__EQnlX select {
-    width: 100%;
+.style-module_widthFull__EQnlX,
+.style-module_widthFull__EQnlX input,
+.style-module_widthFull__EQnlX textarea,
+.style-module_widthFull__EQnlX select {
+  width: 100%;
 }
 .DialogActions {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    border-top: 1px solid hsl(0, 0%, 90.9%);
-    padding: .75rem 1.5rem;
-    gap: .5rem;
-    background-color: hsl(0, 0%, 97.3%);
-
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  border-top: 1px solid hsl(0, 0%, 90.9%);
+  padding: 0.75rem 1.5rem;
+  gap: 0.5rem;
+  background-color: hsl(0, 0%, 97.3%);
 }
 .v-dialog > .v-overlay__content > .v-card {
-    display: flex;
-    flex-direction: column;
-    border-radius: 1rem;
+  display: flex;
+  flex-direction: column;
+  border-radius: 1rem;
 }
-.v-btn--variant-elevated, .v-btn--variant-flat {
-    background: none;
-    color: rgba(var(--v-theme-on-surface), var(--v-high-emphasis-opacity));
+.v-btn--variant-elevated,
+.v-btn--variant-flat {
+  background: none;
+  color: rgba(var(--v-theme-on-surface), var(--v-high-emphasis-opacity));
 }
-button.v-btn.v-btn--elevated.v-theme--light.v-btn--density-default.v-btn--size-default.v-btn--variant-elevated.style-module_button__-niPX.style-module_text__uHJEq.style-module_medium__ASKee{
+button.v-btn.v-btn--elevated.v-theme--light.v-btn--density-default.v-btn--size-default.v-btn--variant-elevated.style-module_button__-niPX.style-module_text__uHJEq.style-module_medium__ASKee {
   border: hidden;
 }
 .v-btn--variant-elevated {
@@ -1228,17 +1278,16 @@ button.v-btn.v-btn--elevated.v-theme--light.v-btn--density-default.v-btn--size-d
 }
 
 .v-btn__overlay {
-    background-color: none;
-    border-radius: inherit;
-    opacity: 0;
-    transition: opacity 0.2s ease-in-out;
+  background-color: none;
+  border-radius: inherit;
+  opacity: 0;
+  transition: opacity 0.2s ease-in-out;
 }
 
 .DialogContentContainerVideo {
-    display: flex;
-    justify-content: center;
-    flex-direction: unset !important;
-    padding: 0;
+  display: flex;
+  justify-content: center;
+  flex-direction: unset !important;
+  padding: 0;
 }
-
 </style>

@@ -21,7 +21,7 @@
                     </div>
 
                     <div class="_actions_2u4q9_61">
-                        <a href="#">
+                        <a href="https://affiliates.fliki.ai/signup" target="_blank">
                             <button class="style-module_button__-niPX style-module_primary__FOp7N style-module_medium__ASKee">
                                 <span>
                                     <span>Join the program</span>

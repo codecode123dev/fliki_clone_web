@@ -49,32 +49,85 @@
             <p class="_subtext_1mrvx_50">
               (credits will reset on Aug 31, 02:17 pm)
             </p>
-            <div style="margin-top: 1rem">
+
+
+
+
+            <div style="margin-top: 1rem" >
               <button
+                @click="showVideo = true"
                 class="style-module_button__-niPX style-module_outline__Yyq-Q style-module_small__8crLq"
               >
                 <span>
                   <span>🎥 Video - How credits work</span>
                 </span>
               </button>
+
+              <v-dialog v-model="showVideo" width="50%">
+                <v-card>
+                  <v-card-text>
+                    <!-- <div id="radix-:r28:" aria-describedby="radix-:r2a:" aria-labelledby="radix-:r29:" data-state="open" class="DialogContent" tabindex="-1" style="max-width: 20rem; pointer-events: auto;">  -->
+                    <div class="DialogHeader">
+                      <p>How credits work</p>
+                      <button @click="showVideo = false">
+                        <img
+                          src="../../assets/files_image/three_dot/close_img.png"
+                          width="16"
+                          height="16"
+                          alt="image"
+                        />
+                      </button>
+                    </div>
+                    <div
+                      class="DialogContentContainer"
+                      style="padding: 0px;"
+                    >
+                      <video controls autoplay style="width: 100%">
+                        <source
+                          src="../../assets/account_image/credit_img/video/how-credits-are-charged-in-fliki-720.mp4"
+                          type="video/mp4"
+                        />
+                      </video>
+                    </div>
+                    <div class="DialogActions">
+                      <button
+                        class="style-module_button__-niPX style-module_text__uHJEq style-module_medium__ASKee"
+                        @click="showVideo = false"
+                      >
+                        <span>
+                          <span>Close</span>
+                        </span>
+                      </button>
+                    </div>
+                  </v-card-text>
+                </v-card>
+              </v-dialog>
             </div>
+
+
+
+
+            
           </div>
         </div>
       </div>
 
       <div class="_section_1mrvx_20 _plan_1mrvx_123">
         <div class="_heading_1mrvx_30">
-            <h2>Plan</h2>
+          <h2>Plan</h2>
         </div>
 
         <div class="_content_1mrvx_44">
-            <p class="_plan_1mrvx_123">Free</p>
-            <p class="_subtext_1mrvx_50">
-                (active since Jul 31, 2023)
-            </p>
-            <div id="payment-section" class="_upgrade_1mrvx_146">
-                <p>
-                    <button class="style-module_button__-niPX style-module_primary__FOp7N style-module_medium__ASKee">
+          <p class="_plan_1mrvx_123">Free</p>
+          <p class="_subtext_1mrvx_50">(active since Jul 31, 2023)</p>
+          <div id="payment-section" class="_upgrade_1mrvx_146">
+            <p>
+                    <button 
+                    class="style-module_button__-niPX style-module_primary__FOp7N style-module_medium__ASKee" 
+                    @click="showSubscribe = !showSubscribe"
+                    v-bind:class="{ showSubscribeToFliki: showSubscribe, '': !showSubscribe }" 
+
+                    >
                         <span>
                             <span>
                                 <img src="../../assets/account_image/credit_img/blink_img.png" width="16" height="16" alt="image">
@@ -84,13 +137,156 @@
                         </span>
                     </button>
                 </p>
+
+
+
+            <div 
+            class="_payment_1w8a5_1 animation slide-up" 
+            v-bind:class="{ showSubscribeToFliki: !showSubscribe, '': showSubscribe }" 
+            >
+              <div class="_form_1w8a5_12">
+                <div class="_top_1w8a5_20">
+                  <h3>Subscribe to Fliki</h3>
+                  <div class="_billings_1w8a5_43">
+                    <label>
+                      <input type="radio" name="plan" value="basic" />
+                      <span>Basic</span>
+                    </label>
+                    <label>
+                      <input
+                        type="radio"
+                        name="plan"
+                        value="standard"
+                        checked
+                      />
+                      <span>Standard</span>
+                    </label>
+                    <label>
+                      <input type="radio" name="plan" value="premium" />
+                      <span>Premium</span>
+                    </label>
+                  </div>
+                  <h4 class="_price_1w8a5_29">
+                    <span class="_original_1w8a5_35">
+                      <span class="font-sans-serif">$</span>
+                      28
+                      <span class="font-sans-serif">$</span>
+                      <span>21</span>
+                    </span>
+                    <span>/month</span>
+                  </h4>
+                  <div class="_billings_1w8a5_43">
+                    <label>
+                      <input
+                        type="radio"
+                        name="billing"
+                        value="yearly"
+                        checked
+                      />
+                      <span>Pay yearly (⚡️25% off)</span>
+                    </label>
+                    <label>
+                      <input type="radio" name="billing" value="monthly" />
+                      <span>Pay monthly</span>
+                    </label>
+                  </div>
+                  <div class="_cta_1w8a5_67">
+                    <a
+                      href="https://checkout.stripe.com/c/pay/cs_live_b1dNqpQ4xjtpp1CKSrEVeWY2RXYXgDLIUF376cNCnbaOubsQyDNoSQ7ci5#fid2cGd2ZndsdXFsamtQa2x0cGBrYHZ2QGtkZ2lgYSc%2FY2RpdmApJ2R1bE5gfCc%2FJ3VuWmlsc2BaMDRON0ZzR05jV2RAfDc3SDViNEZkVHVqfWtsQn9oQEd1MVBDSTEyQTFsU3RqNTw0RERPXDEyNU9yfFFnUjVzYnY0YTFqUWlPbkJvSF1EcGNzbHd%2FcTNjfEs1NU1hdWFrVWxmJyknY3dqaFZgd3Ngdyc%2FcXdwYCknaWR8anBxUXx1YCc%2FJ2hwaXFsWmxxYGgnKSdga2RnaWBVaWRmYG1qaWFgd3YnP3F3cGB4JSUl"
+                      rel="noopener noreferrer"
+                    >
+                      <button
+                        class="style-module_button__-niPX style-module_primary__FOp7N style-module_medium__ASKee"
+                      >
+                        <span>
+                          <span>Make payment</span>
+                          <span>
+                            <span class="style-module_spacing__fGq8-"></span>
+                            <i class="fas fa-arrow-right"></i>
+                          </span>
+                        </span>
+                      </button>
+                    </a>
+                  </div>
+                </div>
+                <div class="_bottom_1w8a5_70">
+                  <img
+                    src="../../assets/account_image/credit_img/stripe.svg"
+                    alt="image"
+                    class="_stripe_1w8a5_76"
+                  />
+                  <p class="_info_1w8a5_80">
+                    <em
+                      >Safe and secure. Cancel anytime. No strings attached.</em
+                    >
+                  </p>
+                </div>
+              </div>
+
+              <div class="_features_1w8a5_85">
+                <p class="_description_1w8a5_95">
+                  Perfect for individuals and professionals who are looking
+                  create videos with voiceovers effortlessly
+                </p>
+                <ul>
+                  <li class="animation slide-in">
+                    <span class="_icon_1w8a5_115">📝</span>
+                    <p>
+                      <span>180 minutes</span>
+                      of audio / video content per month
+                    </p>
+                  </li>
+                  <li class="animation slide-in">
+                    <span class="_icon_1w8a5_115">🎥</span>
+                    <p>Full HD - 1080p videos</p>
+                  </li>
+                  <li class="animation slide-in">
+                    <span class="_icon_1w8a5_115">🏁</span>
+                    <p>Videos of length upto 15 mins</p>
+                  </li>
+                  <li class="animation slide-in">
+                    <span class="_icon_1w8a5_115">🌠</span>
+                    <p>
+                      Millions of premium images, video clips and music assets
+                    </p>
+                  </li>
+                  <li class="animation slide-in">
+                    <span class="_icon_1w8a5_115">✂︎</span>
+                    <p>No Watermark</p>
+                  </li>
+                </ul>
+                <div class="_testimonial_1w8a5_133">
+                  <img
+                    src="../../assets/account_image/credit_img/nicolai.jpg"
+                    alt="image"
+                  />
+                  <div class="_quote_1w8a5_146">
+                    <blockquote>
+                      I love how clean and fast the interface is, using Fliki is
+                      fast and snappy and the audio is "rendered" incredibly
+                      quickly.
+                    </blockquote>
+                    <p class="_author_1w8a5_157">— Nicolai G.</p>
+                  </div>
+                </div>
+              </div>
             </div>
+          </div>
         </div>
       </div>
     </div>
   </div>
 </template>
-<style scoped>
+
+<script>
+export default {
+  data: () => ({
+    showVideo: false,
+    showSubscribe: false
+  }),
+};
+</script>
+<style >
 ._account_1mq9d_1 ._content_1mq9d_77 {
   display: flex;
   flex-direction: column;
@@ -128,133 +324,487 @@
   }
 }
 ._credits_1mrvx_1 ._section_1mrvx_20 {
-    display: flex;
-    flex-direction: column;
-    max-width: 60rem;
-    color: hsl(0, 0%, 9%);
+  display: flex;
+  flex-direction: column;
+  max-width: 60rem;
+  color: hsl(0, 0%, 9%);
 }
 ._credits_1mrvx_1 ._section_1mrvx_20 ._heading_1mrvx_30 {
-    display: flex;
-    flex-direction: column;
-    flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 0;
 }
-h1, h2, h3, h4, h5, h6, p, a, ul, li, label, input, textarea, select {
-    margin: 0;
-    padding: 0;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+a,
+ul,
+li,
+label,
+input,
+textarea,
+select {
+  margin: 0;
+  padding: 0;
 }
 ._credits_1mrvx_1 ._section_1mrvx_20 ._heading_1mrvx_30 h2 {
-    font-weight: 700;
-    font-size: 1.125rem;
-    color: hsl(0, 0%, 9%);
+  font-weight: 700;
+  font-size: 1.125rem;
+  color: hsl(0, 0%, 9%);
 }
 ._credits_1mrvx_1 ._section_1mrvx_20 ._content_1mrvx_44 {
-    display: flex;
-    flex-direction: column;
-    flex-shrink: 0;
-    margin-top: .5rem;
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 0;
+  margin-top: 0.5rem;
 }
 ._credits_1mrvx_1 ._section_1mrvx_20._usage_1mrvx_59 ._summary_1mrvx_63 {
-    display: flex;
-    flex-direction: column;
-    padding: 0;
-    margin: 0;
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+  margin: 0;
 }
-._credits_1mrvx_1 ._section_1mrvx_20._usage_1mrvx_59 ._summary_1mrvx_63 ._graph_1mrvx_69 {
-    display: flex;
-    flex-shrink: 0;
-    width: 100%;
-    height: 12rem;
-    font-size: .85rem;
-    background-color: hsl(0, 0%, 99%);
-    border: 1px solid hsl(0, 0%, 90.9%);
-    padding: 1rem 1rem 0 0;
-    border-radius: .75rem;
+._credits_1mrvx_1
+  ._section_1mrvx_20._usage_1mrvx_59
+  ._summary_1mrvx_63
+  ._graph_1mrvx_69 {
+  display: flex;
+  flex-shrink: 0;
+  width: 100%;
+  height: 12rem;
+  font-size: 0.85rem;
+  background-color: hsl(0, 0%, 99%);
+  border: 1px solid hsl(0, 0%, 90.9%);
+  padding: 1rem 1rem 0 0;
+  border-radius: 0.75rem;
 }
-._credits_1mrvx_1 ._section_1mrvx_20._usage_1mrvx_59 ._summary_1mrvx_63 figcaption {
-    color: hsl(0, 0%, 52.3%);
-    margin-top: .5rem;
-    font-size: .75rem;
-    font-style: italic;
+._credits_1mrvx_1
+  ._section_1mrvx_20._usage_1mrvx_59
+  ._summary_1mrvx_63
+  figcaption {
+  color: hsl(0, 0%, 52.3%);
+  margin-top: 0.5rem;
+  font-size: 0.75rem;
+  font-style: italic;
 }
 ._credits_1mrvx_1 ._section_1mrvx_20._usage_1mrvx_59 ._counter_1mrvx_88 {
-    display: flex;
-    flex-direction: column;
-    margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  margin-top: 1rem;
 }
-._credits_1mrvx_1 ._section_1mrvx_20._usage_1mrvx_59 ._counter_1mrvx_88 ._progress_1mrvx_93 {
-    display: flex;
-    flex: 1;
-    flex-shrink: 0;
-    height: 1rem;
-    width: 100%;
-    background-color: hsl(0, 0%, 88.7%);
-    border-radius: .5rem;
-    position: relative;
-    overflow: hidden;
-    margin-bottom: .5rem;
+._credits_1mrvx_1
+  ._section_1mrvx_20._usage_1mrvx_59
+  ._counter_1mrvx_88
+  ._progress_1mrvx_93 {
+  display: flex;
+  flex: 1;
+  flex-shrink: 0;
+  height: 1rem;
+  width: 100%;
+  background-color: hsl(0, 0%, 88.7%);
+  border-radius: 0.5rem;
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 0.5rem;
 }
-._credits_1mrvx_1 ._section_1mrvx_20._usage_1mrvx_59 ._counter_1mrvx_88 ._progress_1mrvx_93 ._completed_1mrvx_105 {
-    position: absolute;
-    height: 1rem;
-    background-color: hsl(190, 95%, 39%);
-    transition: width .2s;
+._credits_1mrvx_1
+  ._section_1mrvx_20._usage_1mrvx_59
+  ._counter_1mrvx_88
+  ._progress_1mrvx_93
+  ._completed_1mrvx_105 {
+  position: absolute;
+  height: 1rem;
+  background-color: hsl(190, 95%, 39%);
+  transition: width 0.2s;
 }
 ._credits_1mrvx_1 ._section_1mrvx_20 ._content_1mrvx_44 ._subtext_1mrvx_50 {
-    opacity: .75;
+  opacity: 0.75;
 }
 ._credits_1mrvx_1 ._section_1mrvx_20._usage_1mrvx_59 ._counter_1mrvx_88 p {
-    font-size: 1rem;
-    margin-bottom: .5rem;
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
 }
 .style-module_button__-niPX.style-module_small__8crLq {
-    height: 1.75rem;
-    padding: 0 .75rem;
-    border-radius: 1rem;
-    font-size: .85rem;
+  height: 1.75rem;
+  padding: 0 0.75rem;
+  border-radius: 1rem;
+  font-size: 0.85rem;
 }
 .style-module_button__-niPX.style-module_outline__Yyq-Q {
-    color: hsl(0, 0%, 43.5%);
-    border: 1px solid hsl(0, 0%, 78%);
+  color: hsl(0, 0%, 43.5%);
+  border: 1px solid hsl(0, 0%, 78%);
 }
 .style-module_button__-niPX span {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+._credits_1mrvx_1 ._section_1mrvx_20 {
+  display: flex;
+  flex-direction: column;
+  max-width: 60rem;
+  color: hsl(0, 0%, 9%);
+}
+._credits_1mrvx_1 ._section_1mrvx_20._plan_1mrvx_123 {
+  margin-top: 2rem;
+  padding-bottom: 2rem;
+}
+._credits_1mrvx_1 ._section_1mrvx_20 ._heading_1mrvx_30 {
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 0;
+}
+._credits_1mrvx_1 ._section_1mrvx_20 ._heading_1mrvx_30 h2 {
+  font-weight: 700;
+  font-size: 1.125rem;
+  color: hsl(0, 0%, 9%);
+}
+._credits_1mrvx_1 ._section_1mrvx_20 ._content_1mrvx_44 {
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 0;
+  margin-top: 0.5rem;
+}
+._credits_1mrvx_1 ._section_1mrvx_20 ._content_1mrvx_44 ._subtext_1mrvx_50 {
+  opacity: 0.75;
+}
+._credits_1mrvx_1 ._section_1mrvx_20._plan_1mrvx_123 ._upgrade_1mrvx_146 {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  flex-shrink: 0;
+  margin-top: 1rem;
+}
+._credits_2naj6_1 ._section_2naj6_20._plan_2naj6_123 ._upgrade_2naj6_151 {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  flex-shrink: 0;
+  margin-top: 1rem;
+}
+
+.animation {
+  transform: translateZ(0);
+  will-change: transform;
+}
+._payment_1w8a5_1 {
+  display: flex;
+  flex-direction: row;
+  flex: 1;
+  flex-shrink: 0;
+  background: hsl(0, 0%, 97.3%);
+  border: 1px solid hsl(336, 62.3%, 72.9%);
+  border-radius: 0.5rem;
+  overflow: hidden;
+  max-width: 55rem;
+}
+.animation.slide-up {
+  animation: slideUp 0.5s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes slideUp {
+  0% {
+    transform: translateY(0.5rem);
+    opacity: 0.1;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+._payment_1w8a5_1 ._form_1w8a5_12 {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex: 1;
+  flex-shrink: 0;
+  padding: 1rem 1.5rem;
+}
+._payment_1w8a5_1 ._form_1w8a5_12 ._top_1w8a5_20 {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+._payment_1w8a5_1 ._form_1w8a5_12 ._top_1w8a5_20 h3 {
+  font-weight: 600;
+  font-size: 1rem;
+}
+._payment_1w8a5_1 ._form_1w8a5_12 ._top_1w8a5_20 ._billings_1w8a5_43 {
+  display: flex;
+  flex-direction: column;
+  margin-top: 0.5rem;
+}
+._payment_1w8a5_1 ._form_1w8a5_12 ._top_1w8a5_20 ._billings_1w8a5_43 label {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 0.25rem 0;
+}
+._payment_1w8a5_1
+  ._form_1w8a5_12
+  ._top_1w8a5_20
+  ._billings_1w8a5_43
+  label
+  input {
+  margin: 0;
+  padding: 0;
+}
+._payment_1w8a5_1
+  ._form_1w8a5_12
+  ._top_1w8a5_20
+  ._billings_1w8a5_43
+  label
+  span {
+  margin-left: 0.5rem;
+}
+._payment_1w8a5_1 ._form_1w8a5_12 ._top_1w8a5_20 ._billings_1w8a5_43 label {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 0.25rem 0;
+}
+._payment_1w8a5_1 ._form_1w8a5_12 ._top_1w8a5_20 ._price_1w8a5_29 {
+  font-weight: 700;
+  font-size: 1.3125rem;
+  color: hsl(336, 75%, 47.2%);
+  margin-top: 1rem;
+}
+.font-sans-serif {
+  font-family: sans-serif !important;
+}
+._payment_1w8a5_1 ._form_1w8a5_12 ._top_1w8a5_20 ._billings_1w8a5_43 {
+  display: flex;
+  flex-direction: column;
+  margin-top: 0.5rem;
+}
+._payment_1w8a5_1 ._form_1w8a5_12 ._top_1w8a5_20 ._billings_1w8a5_43 label {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 0.25rem 0;
+}
+._payment_1w8a5_1
+  ._form_1w8a5_12
+  ._top_1w8a5_20
+  ._billings_1w8a5_43
+  label
+  input {
+  margin: 0;
+  padding: 0;
+}
+._payment_1w8a5_1 ._form_1w8a5_12 ._top_1w8a5_20 ._cta_1w8a5_67 {
+  margin-top: 1rem;
+}
+a {
+  color: inherit;
+  text-decoration: none;
+}
+._payment_1w8a5_1 ._form_1w8a5_12 ._bottom_1w8a5_70 {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-top: 2rem;
+}
+._payment_1w8a5_1 ._form_1w8a5_12 ._bottom_1w8a5_70 ._stripe_1w8a5_76 {
+  height: 1.5rem;
+  opacity: 0.6;
+}
+._payment_1w8a5_1 ._form_1w8a5_12 ._bottom_1w8a5_70 ._info_1w8a5_80 {
+  opacity: 0.6;
+  margin-top: 0.5rem;
+  font-size: 0.75rem;
+}
+._payment_1w8a5_1 ._features_1w8a5_85 {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  flex: 1;
+  flex-shrink: 0;
+  padding: 1rem 1.5rem;
+  background: hsl(336, 75%, 47.2%);
+  color: hsl(0, 0%, 99%);
+}
+._payment_1w8a5_1 ._features_1w8a5_85 ._description_1w8a5_95 {
+  margin-bottom: 0.5rem;
+}
+._payment_1w8a5_1 ._features_1w8a5_85 ul {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  list-style: none;
+}
+
+.animation {
+  transform: translateZ(0);
+  will-change: transform;
+}
+.animation.slide-in {
+  animation: slideIn 0.5s;
+  animation-fill-mode: forwards;
+}
+._payment_1w8a5_1 ._features_1w8a5_85 ul li {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+  font-size: 0.9rem;
+  font-weight: 400;
+  color: hsl(0, 0%, 99%);
+  text-align: left;
+  margin-bottom: 0.5rem;
+}
+
+@keyframes slideIn {
+  0% {
+    transform: translate(-0.5rem);
+    opacity: 0.1;
+  }
+  100% {
+    transform: translate(0);
+    opacity: 1;
+  }
+}
+
+._payment_1w8a5_1 ._features_1w8a5_85 ul li span {
+  font-weight: 700;
+}
+._payment_1w8a5_1 ._features_1w8a5_85 ul li ._icon_1w8a5_115 {
+  margin-right: 0.5rem;
+  text-decoration: none;
+}
+._payment_1w8a5_1 ._features_1w8a5_85 ul li span {
+  font-weight: 700;
+}
+._payment_1w8a5_1 ._features_1w8a5_85 ._testimonial_1w8a5_133 {
+  display: flex;
+  flex-direction: row;
+  flex-shrink: 0;
+  margin-top: 1.5rem;
+}
+._payment_1w8a5_1 ._features_1w8a5_85 ._testimonial_1w8a5_133 img {
+  width: 4rem;
+  height: 4rem;
+  border-radius: 50%;
+  border: 1px solid hsl(0, 0%, 99%);
+  margin-right: 0.5rem;
+}
+._payment_1w8a5_1
+  ._features_1w8a5_85
+  ._testimonial_1w8a5_133
+  ._quote_1w8a5_146 {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+._payment_1w8a5_1
+  ._features_1w8a5_85
+  ._testimonial_1w8a5_133
+  ._quote_1w8a5_146
+  blockquote {
+  font-size: 0.9rem;
+  padding: 0;
+  margin: 0;
+  font-style: italic;
+}
+._payment_1w8a5_1
+  ._features_1w8a5_85
+  ._testimonial_1w8a5_133
+  ._quote_1w8a5_146
+  ._author_1w8a5_157 {
+  font-size: 0.75rem;
+  margin-top: 0.2rem;
+  opacity: 0.8;
+}
+.style-module_button__-niPX.style-module_outline__Yyq-Q:hover {
+  color: hsl(0, 0%, 9%);
+  border: 1px solid hsl(0, 0%, 43.5%);
+}
+
+.DialogHeader {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 0.5rem 1.25rem;
+  border-bottom: 1px solid hsl(0, 0%, 90.9%);
+  background-color: hsl(0, 0%, 97.3%);
+}
+
+.v-dialog > .v-overlay__content > .v-card > .v-card-text {
+    font-size: inherit;
+    letter-spacing: 0.03125em;
+    line-height: inherit;
+    padding: 0;
+}
+
+.v-card-text {
+    flex: 1 1 auto;
+    font-size: 0.875rem;
+    font-weight: 400;
+    letter-spacing: 0.0178571429em;
+    padding: 0;
+    text-transform: none;
+}
+
+.DialogHeader p {
+    display: flex;
+    flex: 1;
+    font-weight: 600;
+    color: hsl(0, 0%, 9%);
+    font-family: 'Nunito', sans-serif;
+}
+.DialogHeader button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    outline: none;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    border-radius: 1rem;
+    height: 1.75rem;
+    width: 1.75rem;
+    padding: 0;
+    transition: background-color .2s;
+}
+
+.DialogHeader button:hover {
+    background-color: hsl(0, 0%, 88.7%);
+}
+.DialogActions {
     display: flex;
     flex-direction: row;
     align-items: center;
+    justify-content: center;
+    border-top: 1px solid hsl(0, 0%, 90.9%);
+    padding: .75rem 1.5rem;
+    background-color: hsl(0, 0%, 97.3%);
+    gap: .5rem;
 }
-._credits_1mrvx_1 ._section_1mrvx_20 {
-    display: flex;
-    flex-direction: column;
-    max-width: 60rem;
+
+.style-module_button__-niPX.style-module_text__uHJEq {
+    color: hsl(0, 0%, 43.5%);
+}
+.style-module_button__-niPX.style-module_text__uHJEq:hover {
     color: hsl(0, 0%, 9%);
 }
-._credits_1mrvx_1 ._section_1mrvx_20._plan_1mrvx_123 {
-    margin-top: 2rem;
-    padding-bottom: 2rem;
-}
-._credits_1mrvx_1 ._section_1mrvx_20 ._heading_1mrvx_30 {
+.v-dialog > .v-overlay__content > .v-card {
     display: flex;
     flex-direction: column;
-    flex-shrink: 0;
+    border-radius: .75rem ;
 }
-._credits_1mrvx_1 ._section_1mrvx_20 ._heading_1mrvx_30 h2 {
-    font-weight: 700;
-    font-size: 1.125rem;
-    color: hsl(0, 0%, 9%);
-}
-._credits_1mrvx_1 ._section_1mrvx_20 ._content_1mrvx_44 {
+.DialogContent .DialogContentContainer {
     display: flex;
     flex-direction: column;
-    flex-shrink: 0;
-    margin-top: .5rem;
+    flex: 1;
+    padding: 1rem 1.5rem;
 }
-._credits_1mrvx_1 ._section_1mrvx_20 ._content_1mrvx_44 ._subtext_1mrvx_50 {
-    opacity: .75;
-}
-._credits_1mrvx_1 ._section_1mrvx_20._plan_1mrvx_123 ._upgrade_1mrvx_146 {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    flex-shrink: 0;
-    margin-top: 1rem;
+
+.showSubscribeToFliki{
+  display: none;
 }
 </style>

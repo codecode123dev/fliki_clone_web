@@ -12,7 +12,13 @@
 
             <div class="_content_12suf_31">
                 <div>
-                    <button class="style-module_button__-niPX style-module_primary__FOp7N style-module_medium__ASKee">
+                    <button 
+                    class="style-module_button__-niPX style-module_primary__FOp7N style-module_medium__ASKee"
+                    @click="showCreateTeam = !showCreateTeam"
+                    v-bind:class="{ createTeam: showCreateTeam, '': !showCreateTeam }" 
+
+
+                    >
                         <span>
                             <span>Create team</span>
                             <span>
@@ -22,10 +28,49 @@
                         </span>
                     </button>
                 </div>
+
+                <div 
+                class="animation fade-in"
+
+                v-bind:class="{ createTeam: !showCreateTeam, '': showCreateTeam }" 
+
+                >
+                    <div class="style-module_input__8lk6o style-module_widthAuto__vceco">
+                        <p class="style-module_label__QBJfY">Organization name</p>
+                        <input type="text" placeholder="eg: Acme Inc." required name="name" maxlength="20" value>
+                    </div>
+
+
+                    <div class="style-module_input__8lk6o style-module_widthAuto__vceco">
+                        <p class="style-module_label__QBJfY">Organization website</p>
+                        <input type="url" placeholder="eg: https://example.com" required name="website" value>
+                    </div>
+
+
+                    <div>
+                        <button class="style-module_button__-niPX style-module_primary__FOp7N style-module_medium__ASKee" type="submit">
+                            <span>
+                                <span>
+                                    <i class="fas fa-check"></i>
+                                    <span class="style-module_spacing__fGq8-"></span>
+                                </span>
+                                <span>Create</span>
+                            </span>
+                        </button>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
 </template>
+
+<script>
+export default {
+    data: () => ({
+        showCreateTeam: false
+    }),
+}
+</script>
 <style scoped>
 ._account_1mq9d_1 ._content_1mq9d_77 {
     display: flex;
@@ -127,5 +172,42 @@ button {
 }
 .style-module_button__-niPX.style-module_primary__FOp7N:hover {
     background-color: hsl(336, 80%, 57.8%);
+}
+.style-module_widthAuto__vceco {
+    width: auto;
+}
+.style-module_input__8lk6o {
+    margin-bottom: 1.5rem;
+}
+.style-module_input__8lk6o .style-module_label__QBJfY {
+    margin-bottom: .25rem;
+    color: hsl(0, 0%, 43.5%);
+    font-size: .9rem;
+    font-weight: 600;
+}
+
+
+.style-module_input__8lk6o input[type=text], .style-module_input__8lk6o input[type=email], .style-module_input__8lk6o input[type=number], .style-module_input__8lk6o input[type=password], .style-module_input__8lk6o input[type=search], .style-module_input__8lk6o input[type=url], .style-module_input__8lk6o textarea, .style-module_input__8lk6o select, .style-module_input__8lk6o .style-module_box__jZAWt {
+    display: flex;
+    outline: none;
+    background: hsl(0, 0%, 99%);
+    border: 1px solid hsl(0, 0%, 78%);
+    font-size: 1rem;
+    font-weight: 400;
+    color: hsl(0, 0%, 9%);
+    border-radius: 1.25rem;
+    padding: .2rem .75rem;
+    transition: border-color .2s;
+    box-shadow: none;
+    min-height: 2.3rem;
+    min-width: 16rem;
+    word-break: break-word;
+}
+.style-module_input__8lk6o input[type=text]:hover, .style-module_input__8lk6o input[type=text]:focus, .style-module_input__8lk6o input[type=email]:hover, .style-module_input__8lk6o input[type=email]:focus, .style-module_input__8lk6o input[type=number]:hover, .style-module_input__8lk6o input[type=number]:focus, .style-module_input__8lk6o input[type=password]:hover, .style-module_input__8lk6o input[type=password]:focus, .style-module_input__8lk6o input[type=search]:hover, .style-module_input__8lk6o input[type=search]:focus, .style-module_input__8lk6o input[type=url]:hover, .style-module_input__8lk6o input[type=url]:focus, .style-module_input__8lk6o textarea:hover, .style-module_input__8lk6o textarea:focus, .style-module_input__8lk6o select:hover, .style-module_input__8lk6o select:focus, .style-module_input__8lk6o .style-module_box__jZAWt:hover, .style-module_input__8lk6o .style-module_box__jZAWt:focus {
+    border: 1px solid hsl(336, 73.7%, 53.5%);
+}
+
+.createTeam{
+    display: none;
 }
 </style>

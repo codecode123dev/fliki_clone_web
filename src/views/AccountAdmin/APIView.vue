@@ -23,7 +23,7 @@
 
             <div class="_content_1u68e_25">
                 <section>
-                    <a href="#">
+                    <a href="https://github.com/fliki-ai/documentation" target="_blank">
                         <button class="style-module_button__-niPX style-module_secondary__K8Xdw style-module_medium__ASKee">
                             <span>
                                 <span>
